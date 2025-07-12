@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import globals from "globals";
 import { defineConfig } from "eslint/config";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default defineConfig([
   {
@@ -13,4 +14,5 @@ export default defineConfig([
     languageOptions: { globals: globals.browser },
   },
   { rules: { "no-unused-vars": "warn", "no-undef": "warn" } },
+  eslintConfigPrettier,
 ]);
